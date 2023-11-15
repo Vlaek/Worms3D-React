@@ -1,15 +1,15 @@
 import * as THREE from 'three'
 import { useTexture } from '@react-three/drei'
 import { FC } from 'react'
-import { RigidBody } from '@react-three/rapier'
+import { CuboidCollider, RigidBody } from '@react-three/rapier'
 
 const Ground: FC = () => {
 	const texture = useTexture('/Textures/Inside.png')
 	texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
 	return (
-		<RigidBody>
-			<mesh position={[0, -5, 0]} rotation-x={-Math.PI / 2}>
+		<RigidBody type='fixed' colliders={false}>
+			<mesh position={[0, 0, 0]} rotation-x={-Math.PI / 2}>
 				<planeGeometry args={[500, 500]} />
 				<meshStandardMaterial
 					color='gray'
@@ -17,6 +17,7 @@ const Ground: FC = () => {
 					map-repeat={[100, 100]}
 				/>
 			</mesh>
+			<CuboidCollider args={[500, 2, 500]} position={[0, -2, 0]} />
 		</RigidBody>
 	)
 }

@@ -1,5 +1,5 @@
 .wrapper {
-	height: 500px;
+	height: 600px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,6 +8,19 @@
 
 .scene {
 	width: 75%;
-	height: 400px;
+	height: 500px;
 	background-color: #eee;
+	position: relative;
+}
+
+.aim {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	border: 2px solid white;
+	z-index: 2;
 }
