@@ -1,0 +1,52 @@
+.wrapper {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ddd;
+}
+
+.scene {
+	width: 75%;
+	height: 75vh;
+	background-color: #eee;
+	position: relative;
+}
+
+.arrow_btn {
+	cursor: pointer;
+	height: 55px;
+	width: 55px;
+	color: #000;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: #666;
+	}
+}
+
+.main {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.btn {
+	width: 12.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eee;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.btn {
+		background-color: inherit;
+	}
+}

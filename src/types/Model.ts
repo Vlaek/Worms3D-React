@@ -1,9 +1,11 @@
-export interface IWorm {
-	position?: [number, number, number]
+import { Vector3 } from 'three'
+
+export interface IModel {
+	position: Vector3
 	texture?: string
 }
 
-export enum IModels {
+export enum ModelEnum {
 	FreezeWorm = 'Freeze Worm.glb',
 	GirderWorm = 'Girder Worm.glb',
 	JetPackWorm = 'Jet Pack Worm.glb',
