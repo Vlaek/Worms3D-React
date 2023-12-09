@@ -13,7 +13,6 @@ const models = [
 	'Freeze Worm',
 	'Girder Worm',
 	'Parachute Worm',
-	'Test Tubes',
 	'Weapon Crate',
 	'Air Strike',
 	'Fire Punch Worm',
@@ -56,7 +55,9 @@ const App: FC = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			<header>{models[modelIndex]}</header>
+			<header>
+				<div className={styles.header}>{models[modelIndex]}</div>
+			</header>
 			<main className={styles.main}>
 				<div className={styles.btn}>
 					<IoIosArrowBack
@@ -112,7 +113,9 @@ const App: FC = () => {
 							title={'Предыдущий фон'}
 						/>
 					</div>
-					<div>{textures[backgroundIndex]}</div>
+					<div className={styles.footer__title}>
+						{textures[backgroundIndex]}
+					</div>
 					<div className={styles.btn}>
 						<IoIosArrowForward
 							className={styles.arrow_btn}

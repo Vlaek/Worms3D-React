@@ -1,16 +1,38 @@
 .wrapper {
-	height: 100vh;
+	display: grid;
 	width: 100%;
+	min-height: 100vh;
+	grid-template-areas:
+		'h'
+		'm'
+		'f';
+	grid-template-rows: 75px 1fr 100px;
+}
+
+header {
+	grid-area: h;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #ddd;
+}
+
+main {
+	grid-area: m;
+}
+
+footer {
+	grid-area: f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .scene {
-	width: 75%;
-	height: 75vh;
+	width: 80%;
+	height: 100%;
 	background-color: #eee;
 	position: relative;
 }
@@ -34,7 +56,7 @@
 }
 
 .btn {
-	width: 12.5%;
+	width: 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,10 +65,15 @@
 
 .footer {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	width: 30%;
 
 	.btn {
 		background-color: inherit;
+	}
+
+	&__title {
+		user-select: none;
 	}
 }
