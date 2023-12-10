@@ -12,7 +12,7 @@ interface ModelProps {
 const Model: FC<ModelProps> = ({ modelRef, model = 'Worm' }) => {
 	const [height, setHeight] = useState<number>(0)
 
-	const gltf = useLoader(GLTFLoader, `/Models/${model}.glb`)
+	const gltf = useLoader(GLTFLoader, `./Models/${model}.glb`)
 
 	const copiedGltf = useMemo(() => gltf.scene.clone(), [gltf])
 

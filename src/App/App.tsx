@@ -66,6 +66,7 @@ const App: FC = () => {
 						title={'Предыдущая модель'}
 					/>
 				</div>
+				<div className={styles.title}>{models[modelIndex]}</div>
 				<div className={styles.scene}>
 					<Canvas>
 						<ambientLight intensity={0.5} />
@@ -76,7 +77,7 @@ const App: FC = () => {
 							<boxGeometry args={[250, 250, 250]} />
 							<meshBasicMaterial
 								map={new TextureLoader().load(
-									`/Textures/${textures[backgroundIndex]}.png`,
+									`./Textures/${textures[backgroundIndex]}.png`,
 								)}
 								side={2}
 							/>
