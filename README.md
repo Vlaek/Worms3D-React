@@ -4,8 +4,7 @@ The pet project is a 3D model gallery built with React, where users can interact
 
 # Technologies
 
-- React
-- TypeScript
+- HTML, CSS, SASS, JavaScript, React, TypeScript
 - ThreeJS
 - React Three
 - React Icons
